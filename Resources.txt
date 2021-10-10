@@ -1,0 +1,12 @@
+Google Web design and other guidelines:
+https://developers.google.com/web/fundamentals/design-and-ux/
+
+Off-canvas nav:
+http://www.jasny.net/bootstrap/javascript/#offcanvas
+
+
+-- Beautiful CSS Loader/Spinner
+https://ihatetomatoes.net/demos/css3-preloader/
+
+--- Simple, elegant spinner that renders well easily:
+https://stephanwagner.me/only-css-loading-spinner

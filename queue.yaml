@@ -1,0 +1,13 @@
+queue:
+- name: reports-queue
+  rate: 5/s
+
+- name: alerts-queue
+  rate: 5/s
+
+- name: ATrigger-queue
+  rate: 5/s
+
+- name: DST-queue
+  rate: 5/s
+  

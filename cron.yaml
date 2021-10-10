@@ -1,0 +1,4 @@
+cron:
+- description: "daily summary job"
+  url: /endpoints/checkRainAndAlertUsers/
+  schedule: every 1 hours from 00:01 to 23:59

@@ -1,0 +1,23 @@
+Local launch:
+
+
+Old AppEngine:
+
+python "C:\Program Files (x86)\Google\google_appengine\dev_appserver.py" "app.yaml"
+
+------------------------------------------------
+Cloud SDK:
+
+python "C:\Users\OmarAli\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\dev_appserver.py" "app.yaml"
+
+python "C:\Users\omara\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin\dev_appserver.py" "app.yaml"
+
+------------------------------------------------
+
+Network Launch:
+
+python "C:\Program Files (x86)\Google\google_appengine\dev_appserver.py" "app.yaml" --host=0.0.0.0
+
+then use computer's IP to access from other devices connected to same network: IP:port ==> example: 192.168.0.1:8080
+
+-------------------------------------------------

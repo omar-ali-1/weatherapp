@@ -1,0 +1,43 @@
+# application: sourcebase-a547d
+# version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+
+- url: /_ah/queue/deferred
+  script: google.appengine.ext.deferred.deferred.application
+  login: admin
+
+# In production, make sure to uncomment login:admin to secure cron job
+# Uncomment to call url from browser.
+- url: /endpoints/checkRainAndAlertUsers/
+  script: main.application
+  login: admin
+
+- url: /static
+  static_dir: static/
+  application_readable: true
+
+- url: .*
+  script: main.application
+  secure: always
+
+builtins:
+- appstats: on
+- deferred: on
+
+libraries:
+- name: ssl
+  version: latest
+- name: pytz
+  version: latest
+
+- name: django
+  version: "1.5"
+  
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: 'sourcebase.settings'
+  FIREBASE_PROJECT_ID: 'sourcebase-a547d'

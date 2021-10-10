@@ -1,0 +1,16 @@
+../pyzipcode/__init__.py
+../pyzipcode/__init__.pyc
+../pyzipcode/import_zipcodes.py
+../pyzipcode/import_zipcodes.pyc
+../pyzipcode/settings.py
+../pyzipcode/settings.pyc
+../pyzipcode/tests.py
+../pyzipcode/tests.pyc
+../pyzipcode/zipcodes.db
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+entry_points.txt
+not-zip-safe
+requires.txt
+top_level.txt

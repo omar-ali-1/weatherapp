@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Omar Ali">
+    <meta name="google" content="notranslate">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Grow Weather</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link href=https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css rel="stylesheet">
+    <link href="{% static 'sourcebasesite/css/style.css' %}?version=1" rel="stylesheet">
+    <link href="{% static 'sourcebasesite/css/footer2.css' %}?version=1" rel="stylesheet">
+    <!-- keep this -->
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"> 
+
+  </head>
+
+  <body class="site">
+
+    <header>
+
+
+      <nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleContainer" aria-controls="navbarsExampleContainer" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Grow<span>Weather</span></a>
+
+        <div class="collapse navbar-collapse" id="navbarsExampleContainer">
+          <ul class="navbar-nav mr-auto abs-center-x" id="navbar-list">
+              <li class="nav-item" id="navbar-sign-out-2" style="display: none;"><a class="nav-link" id="sign-out-2" href="/">Sign Out</a></li>  
+              <li class="nav-item" id="navbar-signIn" style="display: none;"><div id="firebaseui-auth-container"></div></li>
+          </ul>
+        </div>
+      </nav>
+
+    </header>
+  
+    <main class="site-content">
+
+      <div class="container">
+        {% block content %}
+        {% endblock content %}
+      </div><!-- /.container -->
+    </main>
+
+
+    <footer class="footer-distributed">
+
+      <div class="footer-left">
+
+        <h3>Grow<span>Weather</span></h3>
+
+
+        <p class="footer-company-name">Grow &copy; 2018</p>
+        <p class="footer-company-name">By Omar Ali</p>
+      </div>
+
+    </footer>
+
+
+    <!-- Additional Definitions
+    ================================================== -->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--<script async>window.jQuery || document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"><\/script>')</script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+
+
+    <script async src="{% static 'issuesite/js/loader.js' %}"></script>
+    <!-- Firebase JavaScript and CSS
+    ================================================== -->
+    <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/live/1.0/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/1.0/firebase-ui-auth.css">
+
+
+    <!-- Custom JavaScript and CSS
+    ================================================== -->
+    <link href="{% static 'sourcebasesite/css/style.css' %}?version=1" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'issuesite/js/base.js' %}"></script>
+
+    {% block scripts %}
+    {% endblock scripts %}
+
+  </body>
+</html>

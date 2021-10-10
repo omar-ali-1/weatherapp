@@ -1,0 +1,14 @@
+Numbers need to be verified manually in Twilio API for sms to work, since it is in trial
+
+Make settings in User entity booleans instead of strings
+Use projections, or partial entity fetch, instead of fetching entire entity
+Use task lets where appropriate.
+
+
+A few things I didn't do in the interest of time:
+Build project in isolated virtual env and add only libraries needed
+Follow git commit best practices
+I did not explicitly use caching, we can rely on AppEngine's automatic caching for now.
+Use Google's key management service instead of datastore for added security
+Use celery for task scheduling instead of A Trigger API for added security, control, robustness, and less cost
+I tested these manually in production and development, but I would write tests that interact with the live application, testing features such as entity creation, deletion, modification, whether notifications are sent/received, whether endpoints return correct values, etc.
