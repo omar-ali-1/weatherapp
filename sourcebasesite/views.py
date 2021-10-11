@@ -342,8 +342,8 @@ def _sendMessage(userKey, body, rainAlert=False):
                     to= '+1' + user.phone,
                     from_=twilioNumber,
                 )
-            except:
-                error = "Sorry! We were not able to send you SMS at this time!"
+            except Exception as e:
+                error = "Sorry! We were not able to send you SMS at this time!:" + e
 
         if user.receive_email:
             if rainAlert:
@@ -585,7 +585,12 @@ def _isValidPhoneNumber(phone):
         client = Client(accountSID, authToken)
         number = client.lookups.phone_numbers('+1' + phone).fetch()
         return True
-    except:
+    except Exception as e:
+        logging.info(e)
+        exc_type, exc_obj, exc_tb = sys.exc_info()
+        fname = os.path.split(exc_tb.tb_frame.f_code.co_filename)[1]
+        print(exc_type, fname, exc_tb.tb_lineno)
+        HttpResponse(status=500)
         return False
 
 

@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 # Twilio API
 TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
 os.environ['WILIO_ACCOUNT_SID'] = 'AC437de0c4319e3101f8a41972a7ed10fa'
-os.environ['TWILIO_AUTH_TOKEN'] = 'ace161d8b47b77ad5a729b10c02633f0'
+os.environ['TWILIO_AUTH_TOKEN'] = 'a5bbab02a0de3dda614b9fb93662429a'
 os.environ['TWILIO_NUMBER'] = '+16292069621'
 # Address of Redis instance, our Celery broker
 BROKER_URL = 'redis://localhost:6379/0'
